@@ -26,7 +26,7 @@ export const sendEmail = async (options) => {
      });
 
      const mailOptions = {
-          from: `"Family Tree App" <${process.env.MAIL_GOOGLE_USER}>`,
+          from: `"Family Tree App"  <${process.env.BREVO_FROM}>`,
           to: options.email,
           subject: options.subject,
           text: plainMail,

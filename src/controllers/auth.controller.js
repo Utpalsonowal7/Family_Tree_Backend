@@ -3,7 +3,7 @@ import { ApiResponse } from "../utils/api_response.js";
 import { asyncHandler } from "../utils/async_handler.js";
 import { generateOtp } from "../utils/generateOtp.js";
 import { hashOtp } from "../utils/hashOtp.js";
-import { sendEmail } from "../services/mail.service.js";
+import { sendEmail } from "../services/mail.services.js";
 import { OtpEmailTemplate, ResendOtpEmailTemplate } from "../utils/mail.js";
 import { generateAccssToken, generateRefreshToken } from "../utils/tokens.js";
 import { pool } from "../config/db.js";

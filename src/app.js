@@ -32,8 +32,10 @@ app.use((req, res, next) => {
      next();
 });
 
+import healthCheckRoute from "./router/healthcheck.route.js"
 import authRoute from "./router/auth.route.js";
 import treeRoute from "./router/tree.route.js";
+app.use("/api/v1/healthcheck", healthCheckRoute);
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/tree", treeRoute);
 

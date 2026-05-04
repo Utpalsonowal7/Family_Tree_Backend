@@ -215,7 +215,7 @@ const logIn = asyncHandler(async (req, res) => {
      const { password: _, ...userData } = user;
 
      const options = {
-          secure: true,
+          secure: process.env.NODE_ENV === "production",
           httpOnly: true,
           sameSite: "none"
      };

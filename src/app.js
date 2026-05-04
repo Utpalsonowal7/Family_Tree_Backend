@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 app.use(cors({
-     origin: process.env.CORS_ORIGIN.split(",")|| "*",
+     origin: process.env.CORS_ORIGIN.split(","),
      credentials: true,
      methods: ["GET", "POST", "PUT", "PATCH"],
      allowedHeaders: ["Content-Type", "Authorization"]

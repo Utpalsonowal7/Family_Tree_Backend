@@ -183,7 +183,7 @@ const resendOtp = asyncHandler(async (req, res) => {
      });
 
      return res.status(200).json(
-          new ApiResponse(200,{}, "Otp Resend Successfully")
+          new ApiResponse(200, {}, "Otp Resend Successfully")
      );
 });
 
@@ -280,10 +280,11 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
                     )
                );
      } catch (err) {
-          console.log(err.message);
-          throw new ApiError(
-               401, "Invalid Refresh Token"
-          );
+          if (err instanceof ApiError) {
+               next(err);
+          } else {
+               next(new ApiError(401, "Invalid Refresh Token"));
+          }
      }
 });
 

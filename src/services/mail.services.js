@@ -5,6 +5,7 @@ const mailGenerator = new Mailgen({
      product: {
           name: "Family Tree App",
           link: "https://familytreeapp.com",
+          logo:"https://tlink.up.railway.app/gtM_1_1OXl"
      },
 });
 
